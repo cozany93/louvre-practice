@@ -1,0 +1,978 @@
+
+
+.header_area{
+
+    margin: 0 auto;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    border-bottom: 1px solid #fff;
+
+    width: 100%;
+    height: 104px;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #fff;
+
+    padding: 0 120px;
+
+    
+}
+
+.header_area .container{
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header_area .menu_btn {
+    display: block;
+    width: 40px;
+    height: 24px;
+    
+    position: relative;
+
+    z-index: 9999;
+
+}
+.header_area .menu_btn span{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+.header_area .menu_btn span:nth-child(1){
+    top: 0;
+    left: 0;
+
+}
+.header_area .menu_btn span:nth-child(2){
+    top: 50%;
+    left: 0;
+    
+}
+.header_area .menu_btn span:nth-child(3){
+    top: 100%;
+    left: 0;
+    
+}
+
+
+.header_area .header_logo {
+    width: 192px;
+    height: 32px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header_area .icon_box{
+    display: flex;
+    
+
+}
+.header_area .icon_box .icon{
+    margin-right: 32px;
+    
+}
+.header_area .icon_box .icon:last-child{
+    margin-right: 0;
+}
+
+
+.header_logo svg{
+    fill: #fff;
+}
+/* ------------------------------------- */
+/* header scroll */
+
+.header_area.scroll {
+    position: fixed;
+    height: auto;
+    padding: 20px 20px;
+    background-color: #fff;
+    color: #111;
+
+    animation: scroll 0.3s linear;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.header_area.scroll svg{
+    fill: #111;
+}
+.header_area.scroll .menu_btn span{
+    background-color: #111;
+}
+/* ----------------------------------------------- */
+
+.banner .banner_wrap{
+    display: flex;
+    justify-content: center;
+}
+
+.banner .mySwiper{
+
+    width: 100%;
+    height: 100vh;
+ 
+    
+    overflow: hidden;
+}
+
+.banner .slider_wrap{
+    width: 400%;
+    height: 100%;
+
+    display: flex;
+}
+
+.banner .slide_inner{
+    width: 25%;
+    height: 100%;
+}
+
+
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 1.0) !important;
+}
+
+
+/* -------------------------- */
+/* .menu_section 상단영역 */
+/* 헤더보다 앞에 나와있어야함 */
+.menu_section{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    display: none;
+    transition: 0.3s;
+}
+
+
+/* 햄버거버튼 클릭->메뉴 */
+.menu_section.block{
+    display: block;
+}
+
+
+.menu_section .menu_1 .headtext,
+.menu_section .menu_2 .headtext,
+.menu_section .menu_3 .headtext,
+.menu_section .menu_4 .headtext{
+    font-family: "Playfair Display SC", serif;
+    font-weight: 100;
+    font-size: 4.5rem;
+    color: #fff;
+    /* margin-bottom: 28px; */
+
+
+}
+
+.menu_section .menu_1 .head_box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 28px;
+
+    position: absolute;
+    top: 152px;
+    left: 120px;
+
+}
+.menu_section .menu_2 .head_box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  
+    position: absolute; 
+    top: 296px;
+    left: 120px; 
+
+}
+.menu_section .menu_3 .head_box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 440px;
+    left: 120px; 
+
+}
+.menu_section .menu_4 .head_box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 566px;
+    left: 120px; 
+
+}
+
+/* 헤더가 없어지고 서브메뉴에 나타나는 헤더 */
+.menu_section .sub_menu_head{
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    height: 104px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 60px;
+    align-items: center;
+}
+
+/* 메뉴 닫기 버튼 */
+.menu_section .close_btn{
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+
+
+}
+
+
+
+.menu_section .close_btn span{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.menu_section .close_btn span:first-child{
+    transform: rotate(45deg);
+    top: 50%;
+}
+.menu_section .close_btn span:last-child{
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+/* close 버튼 block */
+.menu_section .close_btn.block{
+    display: block;
+}
+
+
+
+/* 메뉴 왼쪽 */
+.menu_section .left{
+
+}
+
+.menu_section .left .menu_btn{
+
+}
+
+/* 헤드 메뉴버튼 */
+
+
+
+.menu_section .menu_1,
+.menu_section .menu_2,
+.menu_section .menu_3,
+.menu_section .menu_4{
+    margin-left: 120px;
+    text-transform: uppercase;
+}
+
+
+.menu_section .menu_1 .subtext,
+.menu_section .menu_2 .subtext,
+.menu_section .menu_3 .subtext,
+.menu_section .menu_4 .subtext{
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 8px;
+    
+}
+.menu_section .menu_1 .submenu_1{
+    position: absolute;
+    left: 120px;
+    top: 276px;
+    opacity: 0;
+}
+.menu_section .menu_2 .submenu_2{
+    position: absolute;
+    left: 120px;
+    top: 420px;
+    opacity: 0;
+}
+.menu_section .menu_3 .submenu_3{
+    position: absolute;
+    left: 120px;
+    top: 564px;
+    opacity: 0;
+}
+.menu_section .menu_4 .submenu_4{
+    position: absolute;
+    left: 120px;
+    top: 708px;
+    opacity: 0;
+}
+
+
+.menu_section .left .btn1{
+
+    width: 22px;
+    height: 22px;
+
+    position: relative;
+    margin-left: 24px;
+    cursor: pointer;
+
+}
+
+.menu_section .left .btn1 span{
+
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.menu_section .left .btn1 span:first-child{
+    transform: rotate(0);
+    top: 50%;
+
+}
+
+.menu_section .left .btn1 span:last-child{
+    transform: rotate(90deg);
+    top: 50%;
+}
+/* ------------- */
+.menu_section .left .btn2{
+
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    position: relative;
+    margin-left: 24px;
+    cursor: pointer;
+
+}
+
+.menu_section .left .btn2 span{
+
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.menu_section .left .btn2 span:first-child{
+    transform: rotate(0);
+    top: 50%;
+
+}
+
+.menu_section .left .btn2 span:last-child{
+    transform: rotate(90deg);
+    top: 50%;
+}
+/* ------------- */
+.menu_section .left .btn3{
+
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    position: relative;
+    margin-left: 24px;
+    cursor: pointer;
+
+}
+
+.menu_section .left .btn3 span{
+
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.menu_section .left .btn3 span:first-child{
+    transform: rotate(0);
+    top: 50%;
+
+}
+
+.menu_section .left .btn3 span:last-child{
+    transform: rotate(90deg);
+    top: 50%;
+}
+/* ------------- */
+.menu_section .left .btn4{
+
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    position: relative;
+    margin-left: 24px;
+    cursor: pointer;
+
+}
+
+.menu_section .left .btn4 span{
+
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.menu_section .left .btn4 span:first-child{
+    transform: rotate(0);
+    top: 50%;
+
+}
+
+.menu_section .left .btn4 span:last-child{
+    transform: rotate(90deg);
+    top: 50%;
+}
+/* ------------- */
+
+
+
+/* 메뉴 오른쪽 */
+.menu_section .right{
+    margin-right: 0px;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+.menu_section .right .img_box{
+    width: 632px;
+    height: 401px;
+    position: absolute;
+
+
+    /* top: 0;
+    left: 0;
+     */
+
+
+}
+
+.menu_section .right .img1{
+
+    position: absolute;
+    top:-791px;
+    right: 120px;
+    /* opacity: 0; */
+    z-index: 9999;
+}
+
+.menu_section .right .img2{
+
+    position: absolute;
+    top:-791px;
+    right: 120px;
+    /* opacity: 0; */
+    
+}
+
+.menu_section .right .img3{
+    position: absolute;
+    top:-791px;
+    right: 120px;
+    opacity: 0;
+}
+.menu_section .right .img4{
+    position: absolute;
+    top:-791px;
+    right: 120px;
+    opacity: 0;
+    
+}
+
+/* 햄버거버튼 닫기 active */
+/* submenu active */
+
+.menu_box.active{
+
+
+}
+/* ------------------------------- */
+
+.sec_1 {
+
+    padding-top: 88px;
+
+    background-color: #F5F2ED;
+        
+}
+.text_box{
+    color: #222;
+    display: block;
+    width: 630px;
+    
+}
+.infor_contain{
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    width: 100%;
+    text-transform: uppercase;
+
+    display: flex;
+    width: 100%;
+    padding-top: 22px;
+    padding-bottom: 88px;
+}
+
+.sec_1 .headtext{
+    font-weight: 100;
+}
+
+.sec_1 .info_box{
+    width: 842px;
+    height: 517px;
+    font-weight: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 106px;
+    padding-top: 146px;
+  
+}
+
+
+.sec_1 .left{
+    border: 1px solid #111;
+    color: #fff;
+    background-color: #111;
+   }
+
+.sec_1 .right{
+    border: 1px solid #000;
+    color: #000;
+    background-color: #fff;
+    /* margin-top: 61px; */
+    display: flex;
+}
+
+.sec_1 .text_box{
+    margin-left: 120px;
+}
+
+
+.sec_1 .text_box .headtext{
+    font-family: "Playfair Display SC", serif;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+.sec_1 .text_box .subtext{
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+
+.sec_1 .info_box .headtext{
+    margin-bottom: 28px;
+
+ 
+    font-family: "Playfair Display SC", serif;
+    font-size: 2rem;
+    /* margin-bottom: 28px; */
+
+}
+.sec_1 .left .subtext_t{
+    margin-bottom: 8px;
+    
+}
+
+.sec_1 .right p{
+    font-weight: 300;   
+}
+.sec_1 .right .subtext_t{
+    margin-bottom: 26px;
+
+}
+
+
+.sec_1 .right .subtext_b{
+
+
+    margin-top: 4px;
+}
+
+
+.sec_1 .left .btn,
+.sec_1 .right .btn{
+    margin: 0 auto;
+    width: 546px;
+    height: 54px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+    /* margin-top: 89px; */
+
+}
+
+
+.sec_1 .left .btn{
+
+    border: 1px solid #fff;
+    margin-top: 89px;
+
+}
+.sec_1 .left .btn:hover{
+    background-color: #141414;
+}
+.sec_1 .right .btn{
+    margin-top: 40px;
+
+}
+
+
+.sec_1 .right .btn:hover{
+    background-color: #1a1a1a;
+
+}
+/* ----------------------------------------------- */
+
+
+
+.sec_2 .container{
+
+    width: 100%;
+    background-color: #111;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 88px 120px 88px 120px;
+}
+
+
+.sec_2 .invite_title img{
+    display: flex;
+    justify-content: flex-end;
+
+
+    width: 1369px;
+    height: 511px;
+    margin-left: 311px;
+}
+.sec_2 .invite_title img:hover{
+    fill: #727272;
+}
+
+
+.sec_2 .invite_main p{
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 100;
+}
+
+.sec_2 .main_top{
+    display: flex;
+}
+
+.sec_2 .main_top .left{
+    margin-right: 73px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+.sec_2 .frame1{
+    width: 587px; 
+    /* margin-left: 262px; */
+}
+
+.sec_2 .frame1 .img_box {
+    width: 100%;
+    height: 626px;  
+    /* margin-right: 73px; */
+}
+
+.sec_2 .frame1 img{
+    object-position: top;
+
+}
+
+.sec_2 .main_image .left{
+
+}
+
+.sec_2 .frame1 .text_box{
+    margin-top: 24px;
+    /* margin-left: 363px; */
+    text-transform: uppercase;
+    
+}
+.sec_2 .frame1 .text_box_b,
+.sec_2 .frame2 .text_box_b,
+.sec_2 .frame3 .text_box_b,
+.sec_2 .frame4 .text_box_b{
+    margin-top: 12px;
+    
+}
+
+.sec_2 .frame2{
+    width: 850px;
+    
+    margin-top: 362px;
+}
+.sec_2 .frame2 .img_box{
+    width: 100%;
+    height: 579px;
+}
+
+.sec_2 .frame2 .text_box{
+    margin-top: 24px;
+    text-transform: uppercase;
+}
+
+
+.sec_2 .frame3 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    width: 615px;
+    
+}
+.sec_2 .frame3 .img-box{
+    width: 100%;
+    height: 903px;
+}
+.sec_2 .frame3 .text_box{
+    /* margin-top: -365px; */
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    margin-top: 24px;
+}
+.sec_2 .frame4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+
+    
+}
+
+.sec_2 .frame4 .img_box{
+
+    width: 1043px;
+    height: 949px;
+
+    /* margin-left: 750px; */
+    margin-top: 50px;
+}
+
+.sec_2 .frame4 .text_box{
+
+    display: block;
+    /* padding-bottom: 88px; */
+    /* margin-left: 757px; */
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    margin-top: 24px;
+
+
+}
+/* 배경 컬러를 전체적으로 전환 */
+body{
+    transition: 1s;
+}
+
+body.bg{
+    background-color: #DBD0BF;
+}
+
+/* ---------------------------------------- */
+
+.sec_3 .container{
+    width: 100%;
+    height: 1015px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DBD0BF;
+    padding-top: 88px;
+}
+
+.sec_3 .ex_title{
+    font-family: "Playfair Display SC", serif;
+    font-weight: 100;
+    font-size: 2.5rem;
+    margin-bottom: 162px;
+  
+}
+.sec_3 .img_box{
+    display: flex;
+
+    margin-right: -26px;
+
+}
+.sec_3 .box{
+    margin-right: 26px;
+    margin-bottom: 88px;
+    transition: 0.3s;
+    
+    width: calc(20% - 26px);
+    height: 624px;
+}
+
+.sec_3 .box:last-child{
+    margin-right: 0;
+}
+
+.sec_3 .box:hover{
+    transform: translateY(-66px);
+    
+    
+}
+.sec_3 .box4 img{
+    object-position: 78%;
+}
+/* ------------------------------------------- */
+
+.footer{
+    margin: 0 auto;
+    background-color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+
+
+
+.footer .container{
+    width: 100%;
+    height: 387px;
+    text-transform: uppercase;
+
+    padding: 88px;
+}
+
+.footer .footer_box{
+    height: 211px;
+    display: flex;
+    width: 1256px;
+    
+}
+
+.footer .footer_box .box{
+    width: calc(33.333% - 22px);
+
+    margin-right: 22px;
+    
+}
+.footer .footer_box .box h1{
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: #525252;
+}
+.footer .footer_box .box p{
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #919191;
+}
+
+
+.footer .footer_box .box h1:hover{
+    color: #0c0c0c;
+}
+.footer .footer_box .box p:hover{
+    color: #727272;
+
+}
+
+/* -------------------------- */
+.top_btn{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    right: 16px;
+    bottom: 20px;
+    cursor: pointer;
+
+    /* opacity: 0; */
+    /* z-index: -1; */
+    transition: 0.3s;
+}
+.top_btn.scroll{
+    opacity: 1;
+    z-index: 99999;
+}
+
+.top_btn::after{
+    content: "";
+    background: url(../image/top_btn_in.svg) no-repeat center / cover;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 23px;
+    bottom: 17px;
+
+
+}
+
+.top_btn img{
+    animation: topbtn 30s linear infinite;
+}
+
+@keyframes topbtn {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
