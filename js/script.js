@@ -1,6 +1,6 @@
 document.addEventListener(`DOMContentLoaded`, function () { 
     // AOS
-    // AOS.init();
+    AOS.init();
 
 
     // 마우스휠 이벤트(헤더가 휠이 내려갈때는 안보이다가 올라갈때 보이게끔 설정)
